@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <LINK REL=StyleSheet HREF="DDE-style.css" TYPE="text/css" MEDIA=screen></LINK>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="DDE-functions.js"></script>
+    <title>DANCE DANCE EVOLUTION</title>
+</head>
+    
+<script>/*++++++++++++++++++++++++++++++++BODY*++++++++++++++++++++++++++++++++*/</script>
+
+<body>
+	<div class = "wrapper" id="wrapper_screen">
+        <img id = "LeftArrow" width="100" height="100" src="images/LeftArrow.png" alt="Left Arrow" style="display: none;">
+        <img id = "DownArrow" width="100" height="100" src="images/DownArrow.png" alt="Down Arrow" style="display: none;">        
+        <img id = "UpArrow" width="100px" height="100px" src="images/UpArrow.png" alt="Up Arrow" style="display: none;">
+        <img id = "RightArrow" width="100" height="100" src="images/RightArrow.png" alt="Right Arrow" style="display: none;">
+        
+        <img id = "LeftArrowOutline" width="100" height="100" src="images/LeftArrowOutline.png" alt="Left Arrow" style="display: none;">
+        <img id = "DownArrowOutline" width="100" height="100" src="images/DownArrowOutline.png" alt="Down Arrow" style="display: none;">
+        <img id = "UpArrowOutline" width="100px" height="100" src="images/UpArrowOutline.png" alt="Up Arrow" style="display: none;">
+        <img id = "RightArrowOutline" width="100" height="100" src="images/RightArrowOutline.png" alt="Right Arrow" style="display: none;">
+        
+        <div class = "main" id = "main_start_screen">
+            <div class = "header" id = "header_start_screen">
+                <img src="images/DDE_logo.png" alt="Dance Dance Evolution logo">
+            </div>
+            <div id = "start_button_screen"><h1>START</h1></div>
+            <div id = "setup_button_screen"><h2>SETUP</h2></div>
+            <div class = "logo_container">
+                <img src="images/Logo_ResistanceisFutile.png" alt="Resistance is Futile logo" style="margin:0px 50px 0px 0px">
+                <img src="images/Logo_OxfordUniversityMMM.png" alt="Ocford University MMM logo">
+            </div>
+        </div>
+        
+        <div class = "main" id = "main_setup_screen">
+            <div class = "header" id = "header_setup_screen">
+                <img src="images/DDE_logo_small.png" alt="Dance Dance Evolution logo">
+            </div>
+            <h2>SETUP</h2>
+            <div class = "setup_box">
+                <div class = "setup_box_sub_label">
+                    <p class = "black_small">SEQUENCE LENGTH</p>
+                    <p class = "black_small">DIFFICULTY</p>
+                    <p class = "black_small">TOLERANCE</p>
+                    <p class = "black_small">FIDELITY THRESHOLD</p>
+                    <p class = "black_small">CARRY OVER THRESHOLD</p>
+                    <p class = "black_small">TOLERANCE VISIBILITY</p>
+                    <p class = "black_small">RESET SETTINGS</p>
+                </div>
+                <div class = "setup_box_sub_value">
+                    <p class = "black_small"><span id = "decrease_sequence_screen">◀ </span> <span id = "sequence_screen">30</span> <span id = "increase_sequence_screen"> ▶</span></p>
+                    <p class = "black_small"><span id = "decrease_difficulty_screen">◀ </span> <span id = "difficulty_screen">Standard</span> <span id = "increase_difficulty_screen"> ▶</span></p>
+                    <p class = "black_small"><span id = "decrease_tolerance_screen">◀ </span> <span id = "tolerance_screen">5</span> <span id = "increase_tolerance_screen"> ▶</span></p>
+                    <p class = "black_small"><span id = "decrease_fidelity_screen">◀ </span> <span id = "fidelity_screen">75</span>% <span id = "increase_fidelity_screen"> ▶</span></p>
+                    <p class = "black_small"><span id = "decrease_carry_screen">◀ </span> <span id = "carry_screen">50</span>% <span id = "increase_carry_screen"> ▶</span></p>
+                    <p class = "black_small"><span id = "toggle_tolerance_screen"><span id = "tolerance_text_screen">OFF</span></span></p>
+                    <p class = "black_small"><span id = "reset_settings_screen">Reset to default</span></p>
+                </div>
+            </div>
+            <div><h2><span id = "setup_back_button_screen">BACK ↩</span></h2></div>
+        </div>
+        
+        <div class = "main" id = "main_results_screen">
+            <div class = "header" id = "header_results_screen">
+                <h1>YOU TRANSCRIBED A GENE!</h1>
+            </div>    
+                <div class = "results_container">
+                    <p class = "black">Similarity to target: <span id = "results_percentage_screen">0</span></p>
+                    <p class = "black">You are a <span id = 'results_text_screen'>Tester</span></p>
+                    <div class = "box_container" id = "box_container_screen">
+                        <div class = "box_letter" id = "box_letter_0"><p class = "letter" id = "result_letter_0"></p></div>
+                        <div class = "box_letter" id = "box_letter_1"><p class = "letter" id = "result_letter_1"></p></div>
+                        <div class = "box_letter" id = "box_letter_2"><p class = "letter" id = "result_letter_2"></p></div>
+                        <div class = "box_letter" id = "box_letter_3"><p class = "letter" id = "result_letter_3"></p></div>
+                        <div class = "box_letter" id = "box_letter_4"><p class = "letter" id = "result_letter_4"></p></div>
+                        <div class = "box_letter" id = "box_letter_5"><p class = "letter" id = "result_letter_5"></p></div>
+                        <div class = "box_letter" id = "box_letter_6"><p class = "letter" id = "result_letter_6"></p></div>
+                        <div class = "box_letter" id = "box_letter_7"><p class = "letter" id = "result_letter_7"></p></div>
+                        <div class = "box_letter" id = "box_letter_8"><p class = "letter" id = "result_letter_8"></p></div>
+                        <div class = "box_letter" id = "box_letter_9"><p class = "letter" id = "result_letter_9"></p></div>
+                        <div class = "box_letter" id = "box_letter_10"><p class = "letter" id = "result_letter_10"></p></div>
+                        <div class = "box_letter" id = "box_letter_11"><p class = "letter" id = "result_letter_11"></p></div>
+                        <div class = "box_letter" id = "box_letter_12"><p class = "letter" id = "result_letter_12"></p></div>
+                        <div class = "box_letter" id = "box_letter_13"><p class = "letter" id = "result_letter_13"></p></div>
+                        <div class = "box_letter" id = "box_letter_14"><p class = "letter" id = "result_letter_14"></p></div>
+                        <div class = "box_letter" id = "box_letter_15"><p class = "letter" id = "result_letter_15"></p></div>
+                        <div class = "box_letter" id = "box_letter_16"><p class = "letter" id = "result_letter_16"></p></div>
+                        <div class = "box_letter" id = "box_letter_17"><p class = "letter" id = "result_letter_17"></p></div>
+                        <div class = "box_letter" id = "box_letter_18"><p class = "letter" id = "result_letter_18"></p></div>
+                        <div class = "box_letter" id = "box_letter_19"><p class = "letter" id = "result_letter_19"></p></div>
+                        <div class = "box_letter" id = "box_letter_20"><p class = "letter" id = "result_letter_20"></p></div>
+                        <div class = "box_letter" id = "box_letter_21"><p class = "letter" id = "result_letter_21"></p></div>
+                        <div class = "box_letter" id = "box_letter_22"><p class = "letter" id = "result_letter_22"></p></div>
+                        <div class = "box_letter" id = "box_letter_23"><p class = "letter" id = "result_letter_23"></p></div>
+                        <div class = "box_letter" id = "box_letter_24"><p class = "letter" id = "result_letter_24"></p></div>
+                        <div class = "box_letter" id = "box_letter_25"><p class = "letter" id = "result_letter_25"></p></div>
+                        <div class = "box_letter" id = "box_letter_26"><p class = "letter" id = "result_letter_26"></p></div>
+                        <div class = "box_letter" id = "box_letter_27"><p class = "letter" id = "result_letter_27"></p></div>
+                        <div class = "box_letter" id = "box_letter_28"><p class = "letter" id = "result_letter_28"></p></div>
+                        <div class = "box_letter" id = "box_letter_29"><p class = "letter" id = "result_letter_29"></p></div>
+                        <div class = "box_letter" id = "box_letter_30"><p class = "letter" id = "result_letter_30"></p></div>
+                        <div class = "box_letter" id = "box_letter_31"><p class = "letter" id = "result_letter_31"></p></div>
+                        <div class = "box_letter" id = "box_letter_32"><p class = "letter" id = "result_letter_32"></p></div>
+                        <div class = "box_letter" id = "box_letter_33"><p class = "letter" id = "result_letter_33"></p></div>
+                        <div class = "box_letter" id = "box_letter_34"><p class = "letter" id = "result_letter_34"></p></div>
+                        <div class = "box_letter" id = "box_letter_35"><p class = "letter" id = "result_letter_35"></p></div>
+                        <div class = "box_letter" id = "box_letter_36"><p class = "letter" id = "result_letter_36"></p></div>
+                        <div class = "box_letter" id = "box_letter_37"><p class = "letter" id = "result_letter_37"></p></div>
+                        <div class = "box_letter" id = "box_letter_38"><p class = "letter" id = "result_letter_38"></p></div>
+                        <div class = "box_letter" id = "box_letter_39"><p class = "letter" id = "result_letter_39"></p></div>
+                        <div class = "box_letter" id = "box_letter_40"><p class = "letter" id = "result_letter_40"></p></div>
+                        <div class = "box_letter" id = "box_letter_41"><p class = "letter" id = "result_letter_41"></p></div>
+                        <div class = "box_letter" id = "box_letter_42"><p class = "letter" id = "result_letter_42"></p></div>
+                        <div class = "box_letter" id = "box_letter_43"><p class = "letter" id = "result_letter_43"></p></div>
+                        <div class = "box_letter" id = "box_letter_44"><p class = "letter" id = "result_letter_44"></p></div>
+                        <div class = "box_letter" id = "box_letter_45"><p class = "letter" id = "result_letter_45"></p></div>
+                        <div class = "box_letter" id = "box_letter_46"><p class = "letter" id = "result_letter_46"></p></div>
+                        <div class = "box_letter" id = "box_letter_47"><p class = "letter" id = "result_letter_47"></p></div>
+                        <div class = "box_letter" id = "box_letter_48"><p class = "letter" id = "result_letter_48"></p></div>
+                        <div class = "box_letter" id = "box_letter_49"><p class = "letter" id = "result_letter_49"></p></div>
+                        <div class = "box_letter" id = "box_letter_50"><p class = "letter" id = "result_letter_50"></p></div>
+                        <div class = "box_letter" id = "box_letter_51"><p class = "letter" id = "result_letter_51"></p></div>
+                        <div class = "box_letter" id = "box_letter_52"><p class = "letter" id = "result_letter_52"></p></div>
+                        <div class = "box_letter" id = "box_letter_53"><p class = "letter" id = "result_letter_53"></p></div>
+                        <div class = "box_letter" id = "box_letter_54"><p class = "letter" id = "result_letter_54"></p></div>
+                        <div class = "box_letter" id = "box_letter_55"><p class = "letter" id = "result_letter_55"></p></div>
+                        <div class = "box_letter" id = "box_letter_56"><p class = "letter" id = "result_letter_56"></p></div>
+                        <div class = "box_letter" id = "box_letter_57"><p class = "letter" id = "result_letter_57"></p></div>
+                        <div class = "box_letter" id = "box_letter_58"><p class = "letter" id = "result_letter_58"></p></div>
+                        <div class = "box_letter" id = "box_letter_59"><p class = "letter" id = "result_letter_59"></p></div>
+                    </div>
+                    <p class = "black">For more information visit:</p>
+                    <p class = "black"><a href="http://modmedmicro.nsms.ox.ac.uk/resistanceisfutile">The 'Resistance is Futile' website</a>  </p>
+                </div>
+                <div><h2><span id = "replay_button_screen">PLAY AGAIN</span></h2></div>
+                <div><h2><span id = "results_back_button_screen">MAIN MENU</span></h2></div>
+        </div>
+        
+        <div class = "main" id = "main_game_screen">
+            <canvas id="myCanvas" width="800" height="600"></canvas>
+            <h2>QUIT</h2>
+        </div>
+	</div>
+</body>
+</html>
